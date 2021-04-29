@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title = 'CURSO DE ANGULAR curse-manager';
+  title = 'Couser List';
 
   name: string = "VITAO";
   name1: string = "JOAO";

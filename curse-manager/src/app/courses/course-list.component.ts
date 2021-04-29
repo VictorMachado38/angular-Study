@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Course } from './course'
+import { CourseServise } from "./course.service";
 
 @Component({
     selector: 'app-course-list',
@@ -8,46 +9,65 @@ import { Course } from './course'
 
 
 
+
 export class CourseListComponent implements OnInit{
 
     courses: Course[] = [];
 
-    ngOnInit(): void{
-        this.courses = [
+    //esse contrutor vai la no "star.component.css" e cria, depois colocar no ngOnInit
+    constructor(private courseServise: CourseServise) {
+
+        }
+  
+      ngOnInit(): void{
+              
+              //aqui somplesmente seta sentro do vetor couses o os coursos
+              this.courses = this.courseServise.retrivrAll();
+
+                    /*  this.courses = [
             {
                 id: 1,
                 name: 'Angualr',
-                imageUrl: '',
+                imageUrl: '/assets/images/forms.png',
                 price: 99.99,
                 code: 'XPS-8796',
                 duration: 120,
-                rating: 5.4,
-                releaseDate: 'Decmber, 2, 2019'
+                rating: 5.0,
+                releaseDate: 'Decmber, 2, 2019',
+                options: ''
             },
             
             {
                 id: 2,
-                name: 'Angualr 2',
-                imageUrl: '',
+                name: 'Cruso em HTTP',
+                imageUrl: '/assets/images/http.png',
                 price: 5489.99,
                 code: 'LDS-7878',
                 duration: 80,
-                rating: 9.4, 
-                releaseDate: 'Janary, 20, 2020'
+                rating: 3.4, 
+                releaseDate: 'Janary, 20, 2020',
+                options: ''
 
             },
             {
                 id: 3,
-                name: 'João',
-                imageUrl: '',
+                name: 'Router ',
+                imageUrl: '/assets/images/router.png',
                 price: 9.99,
                 code: 'XPO-8080',
                 duration: 88,
-                rating: 7.4, 
-                releaseDate: 'Ocber, 7, 2009'
+                rating: 4.4, 
+                releaseDate: 'Ocber, 7, 2009',
+                options: ''
 
             }
         ]
-    }
+        */
+        
+      }
+
+
+    
+    
 }
 
