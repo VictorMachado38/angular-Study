@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum molestiae odio vitae, ipsa, consequuntur facilis amet at, quia enim saepe? Ex aut explicabo corporis doloribus quas sunt libero dicta.
+    </p>
+
+    <table class="table table-stiped">
+        <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Code</th>
+                    <th>releaseDate</th>
+                    <th>Rating</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{ course.imageUrl }}</td>
+                <td>{{ course.name }}</td>
+                <td>{{ course.price }}</td>
+                <td>{{ course.code }}</td>              
+                <td>{{ course.releaseDate }}</td>
+                <td>{{ course.rating }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </tbody>
+        
+    </table>
+</body>
+</html>
