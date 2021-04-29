@@ -3,7 +3,12 @@
 ### Estudo do angular com o site web.digitalinnovation
 
 
- * Linguagem: Java, JavaScript, HTML
+ * Java 
+ * JavaScript
+ * HTML
+ * Angular
+ * BootStrap
+
  
 
 
