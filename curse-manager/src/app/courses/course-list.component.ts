@@ -1,9 +1,11 @@
+//import { CursorError } from "@angular/compiler/src/ml_parser/lexer";
 import { Component, OnInit } from "@angular/core";
 import { Course } from './course'
 import { CourseServise } from "./course.service";
 
 @Component({
-    selector: 'app-course-list',
+    //selector: 'app-course-list', está sendo feito por rota agora
+
     templateUrl: './course-list.component.html'
 })
 
@@ -12,7 +14,11 @@ import { CourseServise } from "./course.service";
 
 export class CourseListComponent implements OnInit{
 
-    courses: Course[] = [];
+    filteredCourses: Course[] = [];
+    
+    _courses: Course[] = [];
+    
+    _filterBy: string;
 
     //esse contrutor vai la no "star.component.css" e cria, depois colocar no ngOnInit
     constructor(private courseServise: CourseServise) {
@@ -22,8 +28,23 @@ export class CourseListComponent implements OnInit{
       ngOnInit(): void{
               
               //aqui somplesmente seta sentro do vetor couses o os coursos
-              this.courses = this.courseServise.retrivrAll();
+              this._courses = this.courseServise.retrivrAll();
+              this.filteredCourses = this._courses;        
+      }
 
+      set filter(value: string){
+          this._filterBy = value;
+
+          this.filteredCourses = this._courses.filter((course: Course) => course.name.toLowerCase().indexOf(this._filterBy.toLowerCase()) > -1);
+      }
+      get filter(){
+          return this._filterBy;
+      }
+    
+}
+
+
+    
                     /*  this.courses = [
             {
                 id: 1,
@@ -63,11 +84,3 @@ export class CourseListComponent implements OnInit{
             }
         ]
         */
-        
-      }
-
-
-    
-    
-}
-
