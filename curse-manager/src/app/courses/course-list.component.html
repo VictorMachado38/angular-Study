@@ -44,7 +44,11 @@
 
 
                 </td>
-                <td>{{ course.options }}</td>
+                <td>
+
+                    <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">Edit</a>
+
+                </td>
 
             </tr>
         </tbody>
