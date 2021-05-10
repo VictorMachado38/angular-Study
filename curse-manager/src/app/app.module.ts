@@ -30,7 +30,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
         path:'', redirectTo: 'courses', pathMatch: 'full'
       },
       {
-        path:'couses/info/:id', component: CourseInfoComponent
+        path:'courses/info/:id', component: CourseInfoComponent
       },
       {
         path: 'courses', component: CourseListComponent
