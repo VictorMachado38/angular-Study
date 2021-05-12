@@ -6,11 +6,19 @@ import {Course} from './course';
 })
 
 
-export class CourseServise{
+export class CourseService{
 
     retrivrAll(): Course[]{
         return COURSES;
     }
+
+
+    retrieveById(id: number) : Course{
+
+        //isso vai procurar o curso que o ID seja igual, quando achar retorna o valor.
+        return COURSES.find((courseItereator: Course) => courseItereator.id === id);
+    }
+
 
 }
 

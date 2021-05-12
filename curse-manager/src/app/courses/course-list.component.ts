@@ -1,7 +1,7 @@
 //import { CursorError } from "@angular/compiler/src/ml_parser/lexer";
 import { Component, OnInit } from "@angular/core";
 import { Course } from './course'
-import { CourseServise } from "./course.service";
+import { CourseService } from "./course.service";
 
 @Component({
     //selector: 'app-course-list', está sendo feito por rota agora
@@ -21,7 +21,7 @@ export class CourseListComponent implements OnInit{
     _filterBy: string;
 
     //esse contrutor vai la no "star.component.css" e cria, depois colocar no ngOnInit
-    constructor(private courseServise: CourseServise) {
+    constructor(private courseServise: CourseService) {
 
         }
   
