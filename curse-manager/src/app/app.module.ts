@@ -11,7 +11,7 @@ import { ReplacePipe } from './pipe/replace.pipe';
 import { NavComponenet } from './nav-bar/nav-bar.component';
 import { Erro404Component } from './erro404/erro404.component.component';
 import { CourseInfoComponent } from './courses/course-info.component';
-//git
+
 @NgModule({
   declarations: [
     AppComponent,
