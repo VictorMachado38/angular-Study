@@ -45,8 +45,8 @@
              </div>
     </div>
 
-    <button [disabled]="courseForm.invalid" type="button" class="btn btn-primary mr-2">Save</button>
-    <button type="button" class="btn btn-secondary">Back</button>
+    <button [disabled]="courseForm.invalid" (click)="save()" type="button" class="btn btn-primary mr-2">Save</button>
+    <button [routerLink]="['/courses']" type="button" class="btn btn-secondary">Back</button>
 
 
     
